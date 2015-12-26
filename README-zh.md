@@ -53,21 +53,21 @@
 
 - 学会如何使用 `man` 命令去阅读文档。学会使用 `apropos` 去查找文档。了解有些命令并不对应可执行文件，而是Bash内置的，可以使用 `help` 和 `help -d` 命令获取帮助信息。
 
-- 学会使用 `>` 和 `<` 来重定向输出和输入，学会使用 `|` 来重定向管道。明白 `>` 会覆盖了输出文件而 `>>` 是在文件未添加。了解标准输出 stdout 和标准错误 stderr。
+- 学会使用 `>` 和 `<` 来重定向输出和输入，学会使用 `|` 来重定向管道。明白 `>` 会覆盖了输出文件而 `>>` 是在文件未添加。了解标准输出 stdout 和标准错误 stderr。[链接](http://www.cnblogs.com/chengmo/archive/2010/10/17/1853344.html)
 
-- 学会使用通配符 `*` （或许再算上 `?` 和 `[`...`]`） 和引用以及引用中 `'` 和 `"` 的区别。
+- 学会使用通配符 `*` （或许再算上 `?` 和 `[`...`]`） 和引用以及引用中 `'` 和 `"` 的区别。[链接同上](http://www.cnblogs.com/chengmo/archive/2010/10/17/1853344.html)
 
-- 熟悉 Bash 任务管理工具：`&`，**ctrl-z**，**ctrl-c**，`jobs`，`fg`，`bg`，`kill` 等。
+- 熟悉 Bash 任务管理工具：`&`，**ctrl-z**，**ctrl-c**，`jobs`，`fg`，`bg`，`kill` 等。[链接](http://blog.sina.com.cn/s/blog_673ee2b50100iywr.html)
 
 - 了解 `ssh`，以及学会通过使用 `ssh-agent`，`ssh-add` 等命令来实现基本的无密码认证。
 
-- 学会基本的文件管理：`ls` 和 `ls -l` （了解 `ls -l` 中每一列代表的意义），`less`，`head`，`tail` 和 `tail -f` （甚至 `less +F`），`ln` 和 `ln -s` （了解硬链接与软链接的区别），`chown`，`chmod`，`du` （硬盘使用情况概述：`du -hs *`）。 关于文件系统的管理，学习 `df`，`mount`，`fdisk`，`mkfs`，`lsblk`。知道 inode 是什么（与 `ls -i` 和 `df -i` 等命令相关）。
+- 学会基本的文件管理：[`ls`](http://www.cnblogs.com/peida/archive/2012/10/23/2734829.html) 和 `ls -l` （了解 `ls -l` 中每一列代表的意义），[`less`](http://www.cnblogs.com/peida/archive/2012/11/05/2754477.html)，[`head`](http://www.cnblogs.com/peida/archive/2012/11/06/2756278.html#3328666)，`tail` 和 `tail -f` （甚至 `less +F`），[`ln` 和 `ln -s`](http://blog.csdn.net/kension/article/details/3796603) （了解硬链接与软链接的区别），[`chown`](http://www.cnblogs.com/peida/archive/2012/12/04/2800684.html)，[`chmod`](http://www.cnblogs.com/peida/archive/2012/11/29/2794010.html)，`du` （硬盘使用情况概述：`du -hs *`）。 关于文件系统的管理，学习 `df`，`mount`，`fdisk`，`mkfs`，`lsblk`。知道 inode 是什么（与 `ls -i` 和 `df -i` 等命令相关）。[df,du,fdisk](http://os.51cto.com/art/201012/240726_all.htm)
 
-- 学习基本的网络管理：`ip` 或 `ifconfig`，`dig`。
+- 学习基本的网络管理：[`ip`](https://www.zybuluo.com/ghostfn1/note/120631) 或 [`ifconfig`](http://www.cnblogs.com/taobataoma/archive/2007/12/27/1016689.html)，`dig`。
 
-- 熟悉正则表达式，以及 `grep`／`egrep` 里不同参数的作用，例如 `-i`，`-o`，`-v`，`-A`，`-B` 和 `-C`，这些参数是值得学习并掌握的。
+- 熟悉正则表达式[稍复杂版](http://deerchao.net/tutorials/regex/regex.htm)[精简版](https://msdn.microsoft.com/zh-cn/library/ae5bf541(v=vs.90).aspx)，以及 [`grep`／`egrep`](http://man.linuxde.net/grep) 里不同参数的作用，例如 `-i`，`-o`，`-v`，`-A`，`-B` 和 `-C`，这些参数是值得学习并掌握的。
 
-- 学会使用 `apt-get`，`yum`，`dnf` 或 `pacman` （取决于你使用的 Linux 发行版）来查找或安装软件包。并确保你的环境中有 `pip` 来安装基于 Python 的命令行工具 （接下来提到的部分程序使用 `pip` 来安装会很方便）。
+- 学会使用 [`apt-get`](http://os.51cto.com/art/201006/206853.htm)，`yum`，`dnf` 或 `pacman` （取决于你使用的 Linux 发行版）来查找或安装软件包。并确保你的环境中有 `pip` 来安装基于 Python 的命令行工具 （接下来提到的部分程序使用 `pip` 来安装会很方便）。
 
 
 ## 日常使用
@@ -86,7 +86,7 @@
 
 - 如果你输入命令的时候改变了主意，按下 **alt-#** 来在行首添加 `#`，或者依次按下 **ctrl-a**， **#**， **enter**。这样做的话，之后你可以很方便的利用命令行历史回到你刚才输入到一半的命令。
 
-- 使用 `xargs` （ 或 `parallel`）。他们非常给力。注意到你可以控制每行参数个数（`-L`）和最大并行数（`-P`）。如果你不确定它们是否会按你想的那样工作，先使用 `xargs echo` 查看一下。此外，使用 `-I{}` 会很方便。例如：
+- 使用 [`xargs`](http://blog.csdn.net/chinalinuxzend/article/details/3327602) （ 或 `parallel`）。他们非常给力。注意到你可以控制每行参数个数（`-L`）和最大并行数（`-P`）。如果你不确定它们是否会按你想的那样工作，先使用 `xargs echo` 查看一下。此外，使用 `-I{}` 会很方便。例如：
 ```bash
       find . -name '*.py' | xargs grep some_function
       cat hosts | xargs -I{} ssh root@{} hostname
@@ -114,7 +114,7 @@
       trap "echo 'error: Script failed: see failed command above'" ERR
 ```
 
-- 在 Bash 脚本中，子 shell（使用括号 `(...)`）是一种组织参数的便捷方式。一个常见的例子是临时地移动工作路径，代码如下：
+- 在 Bash 脚本中，子 shell（使用括号 `(...)`）是一种组织参数的便捷方式(比如现在在demining这个文件夹下，执行(cd src)以后仍然还在demining文件夹下)。一个常见的例子是临时地移动工作路径，代码如下：
 ```bash
       # do something in current dir
       (cd /some/other/dir && other-command)
@@ -130,7 +130,7 @@
       diff /etc/hosts <(ssh somehost cat /etc/hosts)
 ```
 
-- 了解 Bash 中的“here documents”，例如 `cat <<EOF ...`。
+- 了解 Bash 中的“here documents”，例如 `cat <<EOF ...`。 [cat用法](http://www.cnblogs.com/peida/archive/2012/10/30/2746968.html)
 
 - 在 Bash 中，同时重定向标准输出和标准错误，`some-command >logfile 2>&1`。通常，为了保证命令不会在标准输入里残留一个打开了的文件句柄导致你当前所在的终端无法操作，添加 `</dev/null` 是一个好习惯。
 
@@ -171,7 +171,7 @@
 
 ## 文件及数据处理
 
-- 在当前路径下通过文件名定位一个文件，`find . -iname '*something*'`（或类似的）。在所有路径下通过文件名查找文件，使用 `locate something` （但请记住 `updatedb` 可能没有对最近新建的文件建立索引）。
+- 在当前路径下通过文件名定位一个文件，`find . -iname '*something*'`（或类似的）。在所有路径下通过文件名查找文件，使用 `locate something` （但请记住 `updatedb` 可能没有对最近新建的文件建立索引）。[Linux的五个查找命令：find,locate,whereis,which,type](http://www.kuqin.com/linux/20091009/70532.html)
 
 - 使用 [`ag`](https://github.com/ggreer/the_silver_searcher) 在源代码或数据文件里检索（比 `grep -r` 更好）。
 
